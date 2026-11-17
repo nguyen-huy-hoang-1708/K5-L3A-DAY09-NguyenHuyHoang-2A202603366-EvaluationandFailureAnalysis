@@ -25,3 +25,5 @@ src/eval/instructor/
 
 # Lab 9
 src/traces/
+src/reports/eval_pr.json
+src/reports/traps/
