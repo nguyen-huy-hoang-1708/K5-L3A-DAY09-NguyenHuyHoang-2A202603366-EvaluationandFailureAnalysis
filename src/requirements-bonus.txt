@@ -1,0 +1,2 @@
+# Bonus only (not needed by CI): Inspect AI port of 3 graders
+inspect_ai==0.3.290

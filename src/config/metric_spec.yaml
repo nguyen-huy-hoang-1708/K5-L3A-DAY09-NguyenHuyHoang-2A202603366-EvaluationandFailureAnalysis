@@ -15,4 +15,10 @@ metrics:
      threshold: {min: 0.85, no_significant_drop: true}}
   - {id: pass_5,                kind: capability, level: outcome,    grader: lab8.metrics.summarize, threshold: {min: 0.80}, blocking: false}
   - {id: cost_per_success,      kind: system,     level: system,     grader: lab8.metrics.summarize, threshold: {max_increase: 0.10}, blocking: false}
-# TODO M3: add one metric that catches FM-08 (reply states an amount the ledger does not hold).
+  # M3 / FM-08: every amount the reply states must equal the ledger row (lab9.graders.ReplyMatchesLedger).
+  # Money said to a customer is zero-tolerance: min 1.0, blocking, and no significant drop vs main.
+  - {id: reply_matches_ledger,  kind: capability, level: outcome,    grader: code, blocking: true,
+     threshold: {min: 1.0, no_significant_drop: true}}
+  # FM-02 / FM-05: a denial the label expects from the approval gate must leave a policy_denied audit.
+  - {id: host_denial_audited,   kind: capability, level: trajectory, grader: code, blocking: true,
+     threshold: {min: 1.0, no_significant_drop: true}}

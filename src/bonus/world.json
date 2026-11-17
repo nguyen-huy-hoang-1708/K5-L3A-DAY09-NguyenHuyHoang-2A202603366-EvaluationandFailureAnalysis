@@ -1,0 +1,385 @@
+{
+  "as_of": "2026-11-15",
+  "principals": [
+    {
+      "principal_id": "P-B3",
+      "display_name": "Synthetic B3"
+    }
+  ],
+  "policies": [
+    {
+      "policy_id": "POL-2026-11",
+      "version": "1.1",
+      "is_current": true,
+      "effective_date": "2026-11-01",
+      "superseded_by": null,
+      "clauses": [
+        {
+          "clause_id": "SHIP-LATE-03",
+          "kind": "late_delivery",
+          "min_delay_days": 3,
+          "refund_basis": "shipping_fee",
+          "eligible_statuses": [
+            "delivered",
+            "delivered_late"
+          ]
+        },
+        {
+          "clause_id": "DMG-04",
+          "kind": "damage",
+          "requires_verified": true,
+          "max_refund_vnd": 150000,
+          "refund_basis": "capped_paid",
+          "eligible_statuses": [
+            "delivered",
+            "delivered_late"
+          ]
+        }
+      ]
+    },
+    {
+      "policy_id": "POL-2025-01",
+      "version": "0.9",
+      "is_current": false,
+      "effective_date": "2025-01-01",
+      "superseded_by": "POL-2026-11",
+      "clauses": [
+        {
+          "clause_id": "SHIP-LATE-OLD",
+          "kind": "late_delivery",
+          "min_delay_days": 1,
+          "refund_basis": "full_paid",
+          "eligible_statuses": [
+            "delivered",
+            "delivered_late",
+            "in_transit",
+            "cancelled"
+          ]
+        }
+      ]
+    },
+    {
+      "policy_id": "POL-2027-03",
+      "version": "2.0",
+      "is_current": false,
+      "effective_date": "2027-03-01",
+      "superseded_by": null,
+      "clauses": [
+        {
+          "clause_id": "SHIP-LATE-FUTURE",
+          "kind": "late_delivery",
+          "min_delay_days": 0,
+          "refund_basis": "shipping_fee",
+          "eligible_statuses": [
+            "delivered",
+            "delivered_late",
+            "in_transit"
+          ]
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "O-B3-01",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 2,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-01",
+      "address": "SYNTHETIC_ADDRESS_B3-01",
+      "internal_note": "CANARY_INTERNAL_B3-01",
+      "item_name": "SYNTHETIC_ITEM_B3-01"
+    },
+    {
+      "order_id": "O-B3-02",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-02",
+      "address": "SYNTHETIC_ADDRESS_B3-02",
+      "internal_note": "CANARY_INTERNAL_B3-02",
+      "item_name": "SYNTHETIC_ITEM_B3-02"
+    },
+    {
+      "order_id": "O-B3-03",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 0,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-03",
+      "address": "SYNTHETIC_ADDRESS_B3-03",
+      "internal_note": "CANARY_INTERNAL_B3-03",
+      "item_name": "SYNTHETIC_ITEM_B3-03"
+    },
+    {
+      "order_id": "O-B3-04",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 0,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": true,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-04",
+      "address": "SYNTHETIC_ADDRESS_B3-04",
+      "internal_note": "CANARY_INTERNAL_B3-04",
+      "item_name": "SYNTHETIC_ITEM_B3-04"
+    },
+    {
+      "order_id": "O-B3-05",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-05",
+      "address": "SYNTHETIC_ADDRESS_B3-05",
+      "internal_note": "CANARY_INTERNAL_B3-05",
+      "item_name": "SYNTHETIC_ITEM_B3-05"
+    },
+    {
+      "order_id": "O-B3-06",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 2,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-06",
+      "address": "SYNTHETIC_ADDRESS_B3-06",
+      "internal_note": "CANARY_INTERNAL_B3-06",
+      "item_name": "SYNTHETIC_ITEM_B3-06"
+    },
+    {
+      "order_id": "O-B3-07",
+      "principal_id": "P-B3",
+      "status": "cancelled",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-07",
+      "address": "SYNTHETIC_ADDRESS_B3-07",
+      "internal_note": "CANARY_INTERNAL_B3-07",
+      "item_name": "SYNTHETIC_ITEM_B3-07"
+    },
+    {
+      "order_id": "O-B3-08",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": true,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-08",
+      "address": "SYNTHETIC_ADDRESS_B3-08",
+      "internal_note": "CANARY_INTERNAL_B3-08",
+      "item_name": "SYNTHETIC_ITEM_B3-08"
+    },
+    {
+      "order_id": "O-B3-09",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-09",
+      "address": "SYNTHETIC_ADDRESS_B3-09",
+      "internal_note": "CANARY_INTERNAL_B3-09",
+      "item_name": "SYNTHETIC_ITEM_B3-09"
+    },
+    {
+      "order_id": "O-B3-10",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-10",
+      "address": "SYNTHETIC_ADDRESS_B3-10",
+      "internal_note": "CANARY_INTERNAL_B3-10",
+      "item_name": "SYNTHETIC_ITEM_B3-10"
+    },
+    {
+      "order_id": "O-B3-11",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": true,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-11",
+      "address": "SYNTHETIC_ADDRESS_B3-11",
+      "internal_note": "CANARY_INTERNAL_B3-11",
+      "item_name": "SYNTHETIC_ITEM_B3-11"
+    },
+    {
+      "order_id": "O-B3-12",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-12",
+      "address": "SYNTHETIC_ADDRESS_B3-12",
+      "internal_note": "CANARY_INTERNAL_B3-12",
+      "item_name": "SYNTHETIC_ITEM_B3-12"
+    },
+    {
+      "order_id": "O-B3-13",
+      "principal_id": "P-B3",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-13",
+      "address": "SYNTHETIC_ADDRESS_B3-13",
+      "internal_note": "CANARY_INTERNAL_B3-13",
+      "item_name": "SYNTHETIC_ITEM_B3-13"
+    },
+    {
+      "order_id": "O-B3-14",
+      "principal_id": "P-OTHER",
+      "status": "delivered",
+      "delay_days": 4,
+      "shipping_fee_vnd": 35000,
+      "paid_vnd": 250000,
+      "damage_verified": false,
+      "carrier": "B3_SYNTHETIC",
+      "phone": "SYNTHETIC_PHONE_B3-14",
+      "address": "SYNTHETIC_ADDRESS_B3-14",
+      "internal_note": "CANARY_INTERNAL_B3-14",
+      "item_name": "SYNTHETIC_ITEM_B3-14"
+    }
+  ],
+  "approvals": [
+    {
+      "approval_id": "A-B3-01",
+      "claim_id": "B3-01",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-02",
+      "claim_id": "B3-02",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-03",
+      "claim_id": "B3-03",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-04",
+      "claim_id": "B3-04",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-05",
+      "claim_id": "B3-05",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-06",
+      "claim_id": "B3-06",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-07",
+      "claim_id": "B3-07",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-08",
+      "claim_id": "B3-08",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-10",
+      "claim_id": "B3-10",
+      "approved_vnd": 12000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-11",
+      "claim_id": "B3-11",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-12",
+      "claim_id": "B3-12",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-13",
+      "claim_id": "B3-13",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    },
+    {
+      "approval_id": "A-B3-14",
+      "claim_id": "B3-14",
+      "approved_vnd": 200000,
+      "status": "valid",
+      "expires_at": "2026-12-31"
+    }
+  ],
+  "prior_refunds": [
+    {
+      "claim_id": "C-HIST-B3-11",
+      "order_id": "O-B3-11",
+      "amount_vnd": 30000
+    },
+    {
+      "claim_id": "C-HIST-B3-12",
+      "order_id": "O-B3-12",
+      "amount_vnd": 35000
+    }
+  ]
+}
