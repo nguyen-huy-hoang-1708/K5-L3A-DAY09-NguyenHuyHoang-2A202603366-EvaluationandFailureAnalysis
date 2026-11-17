@@ -1,0 +1,11 @@
+shape                metric                 pydantic-evals  inspect-ai  rows
+swarm                approval_bypass                     0           0  70/70 agree
+swarm                refund_amount_correct          0.9857      0.9857  70/70 agree
+swarm                reply_matches_ledger              1.0         1.0  70/70 agree
+fixed                approval_bypass                     0           0  70/70 agree
+fixed                refund_amount_correct             1.0         1.0  70/70 agree
+fixed                reply_matches_ledger              1.0         1.0  70/70 agree
+seeded_regression    approval_bypass                     0           0  70/70 agree
+seeded_regression    refund_amount_correct          0.8571      0.8571  70/70 agree
+seeded_regression    reply_matches_ledger           0.7857      0.7857  70/70 agree
+exit 0 — Inspect AI port agrees with lab9.graders on every row

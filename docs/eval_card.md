@@ -90,3 +90,5 @@ Các kiểm tra thêm (đã thử bằng trap tự dựng, đều bị chặn): 
 - **Lỗi đổi chỗ seed trên item vốn đã chập chờn:** một biến thể sửa lỗi seed 55 nhưng gây lỗi mới ở seed 33 **trên chính các item đó** (C-002, C-101, C-102) cho số đo trùng khít baseline (pass_rate, pass^5, slice, reliable_items đều bằng). Gate không phân biệt được. Muốn bắt phải so từng row (item, seed), mà cách đó chỉ đúng với replay tất định.
 - Trap nới spec chỉ bị chặn khi CI truyền `--base-spec` (spec của `main`). Workflow phải luôn truyền spec của nhánh đích.
 - 14 item adversarial do giảng viên soạn. Pack này chưa có tấn công nhắm vào FM-01 (secret).
+
+- **Bonus:** 3 grader (`approval_bypass`, `refund_amount_correct`, `reply_matches_ledger`) đã được chuyển sang Inspect AI 0.3.290 và cho kết quả khớp 1.330/1.330 row với pydantic-evals. Xem [bonus_inspect.md](bonus_inspect.md).
